@@ -9,7 +9,7 @@ $('#newBookForm').on('submit', function(e) {
     author: e.target.author.value,
     title: e.target.title.value,
     isbn: e.target.isbn.value,
-    image_url: e.target.image.url.value,
+    image_url: e.target.image_url.value,
     description: e.target.description.value,
   }
 
