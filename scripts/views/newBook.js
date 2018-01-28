@@ -22,7 +22,7 @@ $('#newBookForm').on('submit', function(e) {
 });
 
 function pageLoad() {
-  $.get(`${__API_URL__}/`)
+  $.get(`${__API_URL__}`)
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
   });
