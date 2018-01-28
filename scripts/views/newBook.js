@@ -18,7 +18,7 @@ $('#newBookForm').on('submit', function(e) {
 });
 
 function pageLoad() {
-  $.get('/db/books')
+  $.get('/')
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
   });
