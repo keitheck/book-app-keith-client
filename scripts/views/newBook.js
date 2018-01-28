@@ -1,5 +1,9 @@
 'use strict';
 
+var app = app || {};
+
+var __API_URL__ = 'https://my-book-app-server.herokuapp.com/'; 
+
 pageLoad();
 
 $('#newBookForm').on('submit', function(e) {
@@ -18,7 +22,7 @@ $('#newBookForm').on('submit', function(e) {
 });
 
 function pageLoad() {
-  $.get('/')
+  $.get(`${__API_URL__}/`)
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
   });
