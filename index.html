@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    
+<!-- book entry template -->
+    <script id="book-entry-template" type="text/x-handlebars-template">
+      <div class="bookForm" data-author="{{author}}">
+        <a href="/book/{{book_id}}">
+          <p class="title">{{title}}</p>
+          <p class="author">{{author}}</p>
+          <img src="{{image_url}}">
+        </a>
+      </div>    
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <h1>Book App</h1>
+      <ul>
+        <li>
+          <a href="/">Front View</a>
+          <a href="/new">New Book</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div id="newBookView">
+        <h2>Enter New Book</h2>
+        <form id="newBookForm">
+          <fieldset>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Book Author">
+          </fieldset>
+          <fieldset>
+              <label for="title">Book Title</label>
+              <input type="text" id="title" name="title" placeholder="Book Title">
+          </fieldset>
+          <fieldset>
+              <label for="isbn">Book ISBN</label>
+              <input type="text" id="isbn" name="isbn" placeholder="Book ISBN">
+          </fieldset>
+          <fieldset>
+              <label for="image_url">Link to Image URL</label>
+              <input type="text" id="image_url" name="image_url" placeholder="image_url">
+          </fieldset>
+          <fieldset>
+              <label for="description">Book Summary Description</label>
+              <input rows="25" id="description" name="description" placeholder="description">
+          </fieldset>
+          <button type="submit">Submit</button>        
+        </form>
+      </div>
+
+    </main>
+  </body>
+</html>
