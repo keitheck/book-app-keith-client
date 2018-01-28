@@ -2,3 +2,26 @@
   outline: 1px blue dotted;
   margin: 4px;
 }
+
+body {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.content {
+  width: 450px;
+  margin: 0 auto;
+}
+
+form {
+  border-color: rgb(75, 75, 75);   
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(124, 255, 124);
+  width: 30%;
+  margin: 20px 20px;
+  font-size: 20px; 
+  border-radius: 4px;
+}
