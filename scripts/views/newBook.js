@@ -36,7 +36,7 @@ function pageLoad() {
   $.get(`${__API_URL__}/db/books`)
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
-    $('#results').empty();
+    // $('#results').empty();
   });
 
 }
