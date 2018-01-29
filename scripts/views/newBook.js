@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-var __API_URL__ = 'https://my-book-app-server.herokuapp.com/'; 
+var __API_URL__ = 'https://my-book-app-server.herokuapp.com'; 
 
 pageLoad();
 
