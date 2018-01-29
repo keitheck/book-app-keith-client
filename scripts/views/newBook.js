@@ -14,7 +14,7 @@ $('#newBookForm').on('submit', function(e) {
     title: e.target.title.value,
     isbn: e.target.isbn.value,
     image_url: e.target.image_url.value,
-    description: e.target.description.value,
+    description: e.target.description.value
   }
 
   $.post(`${__API_URL__}/db/books`, data)
