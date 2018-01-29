@@ -17,7 +17,7 @@ $('#newBookForm').on('submit', function(e) {
     description: e.target.description.value,
   }
 
-  $.post(`${__API_URL__}/books`, data)
+  $.post(`${__API_URL__}/db/books`, data)
     .then(function() {
       pageLoad();
     })
@@ -36,7 +36,7 @@ $('#newBookForm').on('submit', function(e) {
 
 // this AJAX request asks server for DB to respond with all book data
 function pageLoad() {
-  $.get(`${__API_URL__}/books`)
+  $.get(`${__API_URL__}/db/books`)
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
     // $('#results').empty();
