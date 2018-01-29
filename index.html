@@ -19,6 +19,17 @@
       </div>    
     </script>
 
+<!-- Individual book view template -->
+    <script id="single-book-template" type="text/x-handlebars-template">
+      <div class="bookForm" data-author="{{author}}">
+          <a href="/book/{{book_id}}">
+            <p class="title">{{title}}</p>
+            <p class="author">{{author}}</p>
+            <p class="isbn">{{isbn}}</p>
+            <p class="description">{{description}}</p>
+            <img src="{{image_url}}">
+          </a>
+    </script>
   </head>
   <body>
     <header>
@@ -32,6 +43,7 @@
     </header>
     <main>
       <div class="content">
+<!-- NEW BOOK ENTRY FORM -->
         <div id="newBookView">
           <h2>Enter New Book</h2>
           <form id="newBookForm">
@@ -58,7 +70,15 @@
             <button type="submit">Submit Book</button>        
           </form>
         </div>
+<!-- SINGLE BOOK VIEW -->
+        <div id="single-book-view">
+          <div id="single-book" class="tab-content">
+            <p>Book View</p>
+          </div>
+          <button id="delete">DELETE BOOK</button>
+        </div>   
       </div>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
