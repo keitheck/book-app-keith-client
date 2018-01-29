@@ -17,14 +17,26 @@ $('#newBookForm').on('submit', function(e) {
     description: e.target.description.value,
   }
 
+  $.post(`${__API_URL__}/db/books`, data)
+    .then(function() {
+      pageLoad();
+    })
+    .catch(function(err) {
+      console.error("newbookform error", err);
+      pageLoad();
+    });
+    
   //AJAX CALL HERE TO POST TO DB
 
 });
 
+
+// this AJAX request asks server for DB to respond with all book data
 function pageLoad() {
-  $.get(`${__API_URL__}`)
+  $.get(`${__API_URL__}/db/books`)
   .then(function(data) {
     console.log('pageLoad data from db/books', data);
+    $('#results').empty();
   });
 
 }
